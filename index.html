@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Story Generator</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">AI Story Generator</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link" data-page="home">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link" data-page="settings">Settings</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="home-page">
+        <div class="input-section">
+            <label for="prompt">Enter Prompt:</label>
+            <input type="text" id="prompt" placeholder="Enter your story prompt">
+        </div>
+        <div class="input-section">
+            <label for="prompt-template">Prompt Template:</label>
+            <select id="prompt-template">
+                <option value="">Select a template</option>
+                <option value="template1">Template 1: A story about...</option>
+                <option value="template2">Template 2: In a world where...</option>
+            </select>
+        </div>
+        <button id="generate-story">Generate Story</button>
+
+        <div class="output-section">
+            <h2>Generated Story:</h2>
+            <p id="story-output"></p>
+        </div>
+    </div>
+
+    <div class="container" id="settings-page" style="display: none;">
+        <h2>Settings</h2>
+        <div class="settings-section">
+            <h3>Model Configuration</h3>
+            <label for="model-select">Select Model:</label>
+            <select id="model-select">
+                <option value="llama2">Llama2 (Local)</option>
+                <option value="gemini">Gemini (API Key)</option>
+            </select>
+        </div>
+
+        <div class="settings-section" id="gemini-settings">
+            <h3>Gemini API Configuration</h3>
+            <label for="gemini-api-key">Gemini API Key:</label>
+            <input type="text" id="gemini-api-key" placeholder="Enter your Gemini API key" value="AIzaSyAeptXuHZ-YPNjLY0dcyUOnRYw9-4HtOd4">
+        </div>
+
+        <button id="save-settings">Save Settings</button>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
